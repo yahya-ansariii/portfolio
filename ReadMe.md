@@ -1,7 +1,7 @@
 Hi 👋 My name is Yahya Ansari
 =============================
 
-Automobile Engineer | Programming Enthusiast
+Data Analyst | Data Science Enthusiast
 --------------------------------------------
 
 * 🌍  I'm based in Mumbai
