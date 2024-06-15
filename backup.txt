@@ -1,0 +1,186 @@
+<section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Professional Experience</h2>
+
+          <img src="./assets/novartis.png" src-light="./assets/novartis.png" src-dark="./assets/novartis.png"
+            alt="Experience icon" class="icon" />
+          <div>
+            <h3>Novartis</h3>
+            <p>Associate Analyst (Nov 23 - Present)</p>
+          </div>
+          <img src="./assets/almabetter_light.png" src-light="./assets/almabetter_light.png" src-dark="./assets/almabetter_dark.png"
+            alt="Experience icon" class="icon" />
+          <div>
+            <h3>AlmaBetter</h3>
+            <p>Data Science Intern</p>
+          </div>
+          <img src="./assets/dimentics.png" src-light="./assets/dimentics.png" src-dark="./assets/dimentics.png"
+            alt="Experience icon" class="icon" />
+          <div>
+            <h3>Dimentics Info Tech</h3>
+            <p>Subject Matter Expert</p>
+          </div>
+
+
+
+          <!-- <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div> -->
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Educational Qualification</h2>
+
+          <img src="./assets/woolf.png" src-light="./assets/woolf.png" src-dark="./assets/woolf.png"
+            alt="Experience icon" class="icon" />
+          <h3>Masters in CS (Pursuing)</h3>
+          <p>Data Science and Artificial Intelligence</p>
+
+
+          <img src="./assets/saboo.png" src-light="./assets/saboo.png" src-dark="./assets/saboo.png"
+            alt="Experience icon" class="icon" />
+
+          <h3>Bachelor of Engineering</h3>
+          <p>Automobile Engineering</p>
+
+
+          <!-- <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark_light.png"
+                  src-light="./assets/checkmark_light.png"
+                  src-dark="./assets/checkmark_dark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div> -->
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+      alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>

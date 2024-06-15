@@ -2,741 +2,382 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <!-- google site verification (google console)-->
-  <meta name="google-site-verification" content="9ODERBKEisatuYCh_ZM6o51YmOTgX5nKPZmf2hzJt3o" />
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yahya Ansari</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
-  <meta content="Welcome to my portfolio website! Yahya Ansari's Portfolio Website. I have showcased my personal projects along with some details about my skills" name="description">
-  <meta content="yahya ansari, data scientist, machine learning, data analyst, novartis, ds, almabetter, portfolio, yahya-ansari, yahya-ansariii" name="keywords">
+  <script>
+    // Custom preloader function with adjusted timings for mobile
+function customPreloader() {
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+  var preloader = $('#custom-preloader');
 
-  <!-- Favicons -->
-  <link href="assets/img/icon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  if (!isMobile) {
+    setTimeout(function () {
+      preloader.addClass('preloaded');
+    }, 800);
+    setTimeout(function () {
+      preloader.remove();
+    }, 2000);
+  } else {
+    setTimeout(function () {
+      preloader.addClass('preloaded'); // Ensure preloader is shown on mobile
+    }, 500); // Adjusted delay for mobile
+    setTimeout(function () {
+      preloader.remove();
+    }, 1500); // Adjusted duration for mobile
+  }
+}
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    // My Load Function
+    function myLoad() {
+      var speed = 500;
+      setTimeout(function () { customPreloader(); }, speed);
+      setTimeout(function () { $('.web_load').addClass('ready'); }, speed + 2000);
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    // Call myLoad on page load
+    $(document).ready(function () {
+      myLoad();
+    });
+  </script>
 </head>
 
+
+
 <body>
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
 
-      <h1><a href="index.html">Yahya Ansari</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm a passionate <!-- Element to contain animated typing -->
-        <span id="typed"></span>
+  <div id="custom-preloader">
+    <div class="custom-loader-line"></div>
+</div>
 
-        <!-- Load library from the CDN -->
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<div class="web_load">
 
-        <!-- Setup and start animation! -->
-        <script>
-          var typed = new Typed('#typed', {
-            strings: ['Data Analyst', 'Data Science Enthusiast', 'Automobile Engineer', 'Developer'],
-            typeSpeed: 100,
-            backSpeed: 80,
-            loop: true,
-          });
-        </script>
-      </h2>
-      <h2>from Mumbai</h2>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="social-links">
-        <a href="https://github.com/yahya-ansariii" class="github" target="_blank" rel="noopener noreferrer"><i
-            class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/yahya-ansari/" class="linkedin" target="_blank"
-          rel="noopener noreferrer"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://www.youtube.com/@novus-afk" class="youtube" target="_blank" rel="noopener noreferrer"><i
-            class="bx bxl-youtube"></i></a>
-        <a href="https://medium.com/@novus_afk" class="medium" target="_blank" rel="noopener noreferrer"><i
-            class="bx bxl-medium"></i></a>
-        <button
-          onclick="window.open('https://drive.google.com/drive/folders/1_A1yVodsjseKxMKOUNSZDYI09m6EVYIt?usp=sharing')"
-          type="button">Download Resume</button>
+  <nav id="desktop-nav">
+    <div class="logo">Yahya Ansari</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <img id="modeToggle" class="icon color-icon" src="./assets/theme_light.png"
+            src-light="./assets/theme_light.png" src-dark="./assets/theme_dark.png" alt="Color them icon" />
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Yahya Ansari</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li>
+          <img id="modeToggle2" class="icon color-icon" src="./assets/theme_light.png"
+            src-light="./assets/theme_light.png" src-dark="./assets/theme_dark.png" alt="Color them icon" />
+        </li>
       </div>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-        <p>Learn more about me</p>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic2.png" alt="Yahya Ansari profile picture" class="circular" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Yahya Ansari</h1>
+      <p class="section__text__p2">Data-Driven Associate Analyst</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2"
+          onclick="window.open('https://drive.google.com/drive/folders/1_A1yVodsjseKxMKOUNSZDYI09m6EVYIt')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
       </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin_light.png" src-light="./assets/linkedin_light.png"
+          src-dark="./assets/linkedin_dark.png" alt="My LinkedIn profile" class="icon linkedin-icon"
+          onclick="window.open('https://linkedin.com/in/yahya-ansari','_blank')" />
+        <img src="./assets/github_light.png" src-light="./assets/github_light.png" src-dark="./assets/github_dark.png"
+          alt="My github profile" class="icon github-icon"
+          onclick="window.open('https://github.com/yahya-ansariii','_blank')" />
+        <img src="./assets/youtube_light.png" src-light="./assets/youtube_light.png" src-dark="./assets/youtube_dark.png"
+          alt="My youtube channel" class="icon github-icon"
+          onclick="window.open('https://www.youtube.com/@yahya-ansari','_blank')" />
+        <img src="./assets/medium_light.png" src-light="./assets/medium_light.png" src-dark="./assets/medium_dark.png"
+          alt="My medium profile" class="icon github-icon"
+          onclick="window.open('https://medium.com/@novus_afk','_blank')" />
+      </div>
+    </div>
+  </section>
 
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.png" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Data-Driven Associate Analyst</h3>
-          <p class="fst-italic">
-            I leverage my passion for data analysis and strong technical skills to support data-driven decision making at Novartis. My background includes 1+ year of experience as a Data Science Intern, where I honed my skills in 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 (Alteryx, Python), 𝗗𝗮𝘁𝗮 𝗩𝗶𝘀𝘂𝗮𝗹𝗶𝘇𝗮𝘁𝗶𝗼𝗻 (Power BI) and 𝗠𝗮𝗰𝗵𝗶𝗻𝗲 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a
-                      href="mailto:yahyaansari62@gmail.com">yahyaansari62@gmail.com</a></span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Mumbai, India</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Engineering</span>
-                </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-              </ul>
-            </div>
+
+  
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <!-- <div class="about">
+          <div class="about-container">
+            <img src="./assets/experience_light.png" src-light="./assets/experience_light.png"
+              src-dark="./assets/experience_dark.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Frontend Development</p>
           </div>
+        </div> -->
+
+        <div class="text-container">
           <p>
-            My expertise in these areas have been honed through various internships and projects that I have undertaken.
-            I am proficient in SQL, Python, and Machine Learning and I have a strong problem-solving and analytical
-            skills.
-            Additionally, I have excellent verbal and written communication skills, which enables me to work effectively
-            in teams.
-            I am passionate about the automotive industry and Data Science and am always looking for new challenges and
-            opportunities to improve my skills and knowledge.
+            I leverage my passion for data analysis and strong technical skills to support 𝗱𝗮𝘁𝗮-𝗱𝗿𝗶𝘃𝗲𝗻 decision making
+            at 𝗡𝗼𝘃𝗮𝗿𝘁𝗶𝘀.
+            My background includes 1+ year of experience in data analytics and data science,
+            where I honed my skills in 𝗗𝗮𝘁𝗮 𝗔𝗻𝗮𝗹𝘆𝘀𝗶𝘀 (Alteryx, Python), 𝗗𝗮𝘁𝗮 𝗩𝗶𝘀𝘂𝗮𝗹𝗶𝘇𝗮𝘁𝗶𝗼𝗻
+            (Power BI) and 𝗠𝗮𝗰𝗵𝗶𝗻𝗲 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴.
           </p>
-        </div>
-      </div>
-
-    </div><!-- End About Me -->
-
-    <!-- ======= Counts ======= -->
-    <div class="counts container">
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6">
-          <div class="count-box">
-            <i class="bi bi-hourglass-split"></i>
-            <span data-purecounter-start="0" data-purecounter-end="768" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Hours worked</p>
-          </div>
+          <br><br>
         </div>
 
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="13" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-award"></i>
-            <span data-purecounter-start="0" data-purecounter-end="38" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Certificates</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-journal-text"></i>
-            <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Mini Projects</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div><!-- End Counts -->
-
-    <!-- ======= Skills  ======= -->
-    <div class="skills container">
-
-      <div class="section-title">
-        <h2>Skills</h2>
-        <p>Some of the important skills are highlighted below</p>
-      </div>
-
-      <div class="row skills-content">
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">Microsoft Office (Word, Excel, PowerPoint) <i class="val">82%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <div class="about-details-container">
+          <div class="details-container">
+            <div class="article-container">
+              <article>
+                <img src="./assets/office_light.png" src-light="./assets/office_light.png"
+                  src-dark="./assets/office_dark.png" alt="Office icon" class="icon" />
+                <div>
+                  <h3>MS Office</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/python_light.png" src-light="./assets/python_light.png"
+                  src-dark="./assets/python_dark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/pbi_light.png" src-light="./assets/pbi_light.png"
+                  src-dark="./assets/pbi_dark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Power Bi</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/github_light.png" src-light="./assets/github_light.png"
+                  src-dark="./assets/github_dark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Git/Github</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/sql_light.png" src-light="./assets/sql_light.png"
+                  src-dark="./assets/sql_dark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/ml_light.png" src-light="./assets/ml_light.png"
+                  src-dark="./assets/ml_dark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Machine Learning</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
             </div>
           </div>
-
-          <div class="progress">
-            <span class="skill">Power Bi <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Python <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">Git/Github <i class="val">76%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">SQL (postgreSQL) <i class="val">72%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Machine Learning <i class="val">79%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div><!-- End Skills -->
-
-    <!-- ======= Interests ======= -->
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Interests</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="bi bi-robot" style="color: #ffbb2c;"></i>
-            <h3>Machine Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="bi bi-filetype-ai" style="color: #5578ff;"></i>
-            <h3>Artificial Intelligence</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>Predictive Modelling</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="bi bi-body-text" style="color: #e361ff;"></i>
-            <h3>Natural Language Processing</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="bi bi-cpu" style="color: #47aeff;"></i>
-            <h3>Deep Learning</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="bi bi-hdd-network" style="color: #ffa76e;"></i>
-            <h3>Neural Network</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="bi bi-webcam" style="color: #11dbcf;"></i>
-            <h3>Computer Vision</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="bi bi-chat-left-quote" style="color: #4233ff;"></i>
-            <h3>Large Language Models</h3>
-          </div>
         </div>
       </div>
-
-    </div><!-- End Interests -->
-
-  </section><!-- End About Section -->
-
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-        <div class="text-center"><button
-            onclick="window.open('https://drive.google.com/drive/folders/1_A1yVodsjseKxMKOUNSZDYI09m6EVYIt?usp=sharing')"
-            type="button">Download Resume</button></div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
-          <div class="resume-item pb-0">
-            <h4>Yahya Ansari</h4>
-            <p><em>Innovative and deadline-driven Data Science and Analytics enthusiast with 1+ year of experience in training and developing machine learning models for different use cases from initial concept to final, polished deliverable.</em></p>
-            <p>
-            <ul>
-              <li>Mumbai, India</li>
-              <li><a href="tel:+919004383534">+91 90043 83534</a></li>
-              <li><a href="mailto:yahyaansari62@gmail.com">yahyaansari62@gmail.com</a></li>
-            </ul>
-            </p>
-          </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Masters in CS : Data Science and Artificial Intelligence</h4>
-            <h5>2023 - Present</h5>
-            <p><em>Woolf University</em></p>
-            <p></p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Engineering in Automobile Engineering</h4>
-            <h5>2015 - 2019</h5>
-            <p><em>M. H. Saboo Siddik College of Engineering</em></p>
-            <p></p>
-          </div>
-          <div class="resume-item">
-            <h4>Higher Secondary School Certificate</h4>
-            <h5>2013 - 2015</h5>
-            <p><em>Jai Hind College</em></p>
-            <p></p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Associate Analyst</h4>
-            <h5>November 2023 - Present</h5>
-            <p><em>Novartis</em></p>
-        <ul>
-              <li>Leverage 𝗱𝗮𝘁𝗮 𝗮𝗻𝗮𝗹𝘆𝘀𝗶𝘀 𝘀𝗸𝗶𝗹𝗹𝘀 to support 𝗔𝗖𝗘𝗻𝗴𝗮𝗴𝗲 Team at Novartis.</li>
-              <li>Utilize tools like 𝗣𝗼𝘄𝗲𝗿 𝗕𝗜, 𝗔𝗹𝘁𝗲𝗿𝘆𝘅 𝗮𝗻𝗱 𝗣𝘆𝘁𝗵𝗼𝗻 for data cleaning, manipulation, and analysis.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Data Science Intern</h4>
-            <h5>July 2022 - October 2023</h5>
-            <p><em>AlmaBetter</em></p>
-            <ul>
-              <li>Learnt skills like Feature engineering, EDA, Data visualisation and other skills like Teamwork, Time management and Problem-solving. Got hand-on experience with tools like Power BI, Tableau , and Scikit-Learn.</li>
-              <li>Worked on projects like Book Recommendation System, Cardiovascular Risk Prediction, and Bike Sharing Demand Prediction. Worked on SQL case studies like Danny's Dinner, Pizza Runner and Foodie Fi. Gained proficiency in python programming.</li>
-              <li>Secured a place in the top 5% of students in the cohort of 300+ students, which allowed me to work as a Subject Matter Expert for Doubt Resolution.</li>
-            </ul>
-          </div>
-<!--           <div class="resume-item">
-            <h4>Subject Matter Expert - Intern</h4>
-            <h5>October 2022 - December 2022</h5>
-            <p><em>Digipplus</em></p>
-            <ul>
-              <li>Reviewed content for class 10 Mathematics.</li>
-              <li>Edited 100 solutions per day for class 6 to class 10 Mathematics as per the guidelines.</li>
-            </ul>
-          </div> -->
-          <div class="resume-item">
-            <h4>Subject Matter Expert - Intern</h4>
-            <h5>December 2021 - June 2022</h5>
-            <p><em>Dimentics Infotech Pvt. Ltd.</em></p>
-            <ul>
-              <li>Created content for textbooks and e-courses for mechanical engineering subjects.</li>
-              <li> Reviewed and edited existing content. </li>
-              <li>Created high-quality learning content for Mechanical Engineering.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section><!-- End Resume Section -->
+    <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+      alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  
 
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
 
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>Here are some of the major projects</p>
-      </div>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Professional Experience</h2>
 
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-ds">Data Science</li>
-            <li data-filter=".filter-python">Python</li>
-            <li data-filter=".filter-auto">Automobile Engineering</li>
-          </ul>
-        </div>
-      </div>
+                <div class="experience-item">
+                    <img src="./assets/novartis.png" src-light="./assets/novartis.png" src-dark="./assets/novartis.png"
+                        alt="Experience icon" class="icon" />
+                    <div>
+                        <h3>Novartis</h3>
+                        <p>Associate Analyst (Nov 23 - Present)</p>
+                    </div>
+                </div>
 
-      <div class="row portfolio-container">
+                <div class="experience-item">
+                    <img src="./assets/almabetter_light.png" src-light="./assets/almabetter_light.png" src-dark="./assets/almabetter_dark.png"
+                        alt="Experience icon" class="icon" />
+                    <div>
+                        <h3>AlmaBetter</h3>
+                        <p>Data Science Intern</p>
+                    </div>
+                </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-auto">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/buggy.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Baja SAE India</h4>
-              <p>Automobile Engineering</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/buggy.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Baja SAEINDIA"><i class="bx bx-plus"></i></a>
-                <a href="baja.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
-                  class="portfolio-details-lightbox" title="Details"><i class="bx bx-link"></i></a>
-              </div>
+                <div class="experience-item">
+                    <img src="./assets/dimentics.png" src-light="./assets/dimentics.png" src-dark="./assets/dimentics.png"
+                        alt="Experience icon" class="icon" />
+                    <div>
+                        <h3>Dimentics Info Tech</h3>
+                        <p>Subject Matter Expert</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Educational Qualification</h2>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-ds">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/book.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Book Recommendation System</h4>
-              <p>Data Science</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/book.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Book Recommendation System"><i class="bx bx-plus"></i></a>
-                <a href="book.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
-                  class="portfolio-details-lightbox" title="Details"><i class="bx bx-link"></i></a>
-              </div>
+                <div class="experience-item">
+                    <img src="./assets/woolf_light.png" src-light="./assets/woolf_light.png" src-dark="./assets/woolf_dark.png"
+                        alt="Experience icon" class="icon" />
+                    <div>
+                        <h3>Masters in CS (Pursuing)</h3>
+                        <p>Data Science and Artificial Intelligence</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <img src="./assets/saboo.png" src-light="./assets/saboo.png" src-dark="./assets/saboo.png"
+                        alt="Experience icon" class="icon" />
+                    <div>
+                        <h3>Bachelor of Engineering</h3>
+                        <p>Automobile Engineering</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-ds">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/cardio.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Cardiovascular Risk Prediction</h4>
-              <p>Data Science</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/cardio.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Cardiovascular Risk Prediction"><i class="bx bx-plus"></i></a>
-                <a href="cardio.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
-                  class="portfolio-details-lightbox" title="Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-ds">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/bike.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Seoul Bike Sharing Demand Prediction</h4>
-              <p>Data Science</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/bike.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Seoul Bike Sharing Demand Prediction"><i class="bx bx-plus"></i></a>
-                <a href="bike.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external"
-                  class="portfolio-details-lightbox" title="Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-python">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/cfd.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Computational Fluid Dynamics Programs</h4>
-              <p>Python</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/cfd.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="CFD Programs"><i class="bx bx-plus"></i></a>
-                <a href="cfd.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-auto">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/exo.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design and Development of Lower Body Exoskeleton</h4>
-              <p>Automobile Engineering</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/exo2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Design and Development of Lower Body Exoskeleton"><i class="bx bx-plus"></i></a>
-                <a href="exo.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-python">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/telecom.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Telecom Churn Analysis EDA</h4>
-              <p>Python</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/telecom.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Telecom Churn Analysis EDA"><i class="bx bx-plus"></i></a>
-                <a href="telecom.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                  title="Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-auto">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/chassis.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design and Analysis of Monocoque Chassis</h4>
-              <p>Automobile Engineering</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/chassis2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Design and Analysis of Monocoque Chassis"><i class="bx bx-plus"></i></a>
-                <a href="chassis.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                  title="Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-auto">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/engine.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Design and Analysis of various Engine Components</h4>
-              <p>Automobile Engineering</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/engine3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Design and Analysis of various Engine Components"><i class="bx bx-plus"></i></a>
-                <a href="engine.html" class="portfolio-details-lightbox" data-glightbox="type: external"
-                  title="Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-auto">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/f1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Drag Force comparison with F-1 Car</h4>
-              <p>Automobile Engineering</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/f1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Drag Force comparison with F-1 Car"><i class="bx bx-plus"></i></a>
-                <a href="f1.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i
-                    class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </section><!-- End Portfolio Section -->
+    <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+        alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
 
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
 
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
+
+
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/book.jpg" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Book Recommendation System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://github.com/yahya-ansariii/BookRecommender', '_blank')">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://bookrec.pythonanywhere.com/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/cardio.jpg" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Cardiovascular Risk Prediction</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://github.com/yahya-ansariii/CardiovascularRisk', '_blank')">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://cardio.pythonanywhere.com/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/bike.jpg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Bike Sharing Demand Prediction</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://github.com/yahya-ansariii/BikeSharingDemandRegression', '_blank')">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn"
+              onclick="window.open('https://yahyaansari62.pythonanywhere.com/','_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
       </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>Location</h3>
-            <p>Byculla, Mumbai - 400 011</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://github.com/yahya-ansariii" class="github" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/yahya-ansari/" class="linkedin" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-              <a href="https://www.youtube.com/@novus-afk" class="youtube" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-youtube"></i></a>
-              <a href="https://medium.com/@novus_afk" class="medium" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-medium"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p><a href="mailto:yahyaansari62@gmail.com">yahyaansari62@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p><a href="tel:+919004383534">+91 90043 83534</a></p>
-          </div>
-        </div>
-      </div>
-
-      <form action="https://formspree.io/f/xlezvlwn" id="my-form" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <p id="my-form-status"></p>
-        </div>
-        <div class="text-center"><button type="submit" id="my-form-button">Send Message</button></div>
-      </form>
-
     </div>
-  </section><!-- End Contact Section -->
-
-  <div class="foot">
-    &copy; <strong><span>Yahya Ansari</span></strong>. All Rights Reserved
+    <img src="./assets/arrow_light.png" src-light="./assets/arrow_light.png" src-dark="./assets/arrow_dark.png"
+      alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email_light.png" src-light="./assets/email_light.png" src-dark="./assets/email_dark.png"
+          alt="Email icon" class="icon contact-icon email-icon" 
+          onclick="window.open('mailto:yahyaansari62@gmail.com')"/>
+        <p><a href="mailto:yahyaansari62@gmail.com">yahyaansari62@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin_light.png" src-light="./assets/linkedin_light.png"
+          src-dark="./assets/linkedin_dark.png" alt="My LinkedIn profile" class="icon linkedin-icon"
+          onclick="window.open('https://linkedin.com/in/yahya-ansari','_blank')" />
+        <p><a href="https://www.linkedin.com/in/yahya-ansari" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Yahya Ansari. All Rights Reserved.</p>
+    <p style="font-size: x-small;">Template by: Ade-Mir</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
   </div>
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-  </div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script>
-    var form = document.getElementById("my-form");
-
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-  </script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
 </body>
 
 </html>
